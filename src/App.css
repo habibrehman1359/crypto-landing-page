@@ -1,0 +1,867 @@
+/* ==========================================================================
+   GLOBAL RESET & UTILITIES
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  color: #0b1426;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+.text-primary-gradient-text {
+  background: linear-gradient(135deg, #00a3ff 0%, #0057ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-primary-gradient {
+  background: linear-gradient(135deg, #00a3ff 0%, #0062ff 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(0, 98, 255, 0.35);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-primary-gradient:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 98, 255, 0.45);
+}
+
+.btn-login-pill {
+  color: #0b1426 !important;
+  font-weight: 600;
+  padding: 0.5rem 1.4rem;
+  border-radius: 50rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-login-pill:hover {
+  background-color: #f1f5f9;
+}
+
+.text-profit {
+  color: #0bb783 !important;
+}
+
+.text-loss {
+  color: #f64e60 !important;
+}
+
+/* ==========================================================================
+   SECTION: HERO BANNER & CAPSULE FORM
+   ========================================================================== */
+.hero-banner-section {
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(0, 163, 255, 0.08) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 90% 60%,
+      rgba(99, 102, 241, 0.08) 0%,
+      transparent 45%
+    ),
+    #fbfcfe;
+  min-height: 520px;
+}
+
+.hero-title {
+  color: #0f172a;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+/* Floating Capsule Search Form */
+.hero-input-capsule {
+  max-width: 440px;
+  background: #ffffff;
+  padding: 6px;
+  border-radius: 50rem;
+  border: 1px solid #e2e8f0;
+  box-shadow:
+    0 10px 25px -5px rgba(0, 87, 255, 0.12),
+    0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+}
+
+.hero-input-capsule:focus-within {
+  border-color: #00a3ff;
+  box-shadow: 0 12px 30px -5px rgba(0, 163, 255, 0.22);
+}
+
+.hero-input-field {
+  background: transparent !important;
+  font-size: 0.95rem;
+  color: #1e293b;
+}
+
+.hero-input-field::placeholder {
+  color: #94a3b8;
+}
+
+/* Ambient Sparkles & Glows */
+.hero-bg-glow {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.glow-left {
+  top: -40px;
+  left: -40px;
+  background: #00d2ff;
+}
+
+.glow-right {
+  bottom: 0px;
+  right: 5%;
+  background: #6366f1;
+}
+
+.deco-sparkle {
+  color: #00a3ff;
+  font-size: 1.25rem;
+  opacity: 0.6;
+  position: absolute;
+  pointer-events: none;
+}
+
+.sparkle-top {
+  top: 15%;
+  left: 8%;
+}
+
+.sparkle-center {
+  bottom: 25%;
+  left: 45%;
+}
+
+.hero-main-img {
+  max-height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hero-main-img:hover {
+  transform: scale(1.02);
+}
+
+/* ==========================================================================
+   SECTION: PARTNERS & MARKET TREND TABLE
+   ========================================================================== */
+.partners-section {
+  background: #ffffff;
+  padding: 2.5rem 0;
+}
+
+.partners-heading {
+  color: #0b1426;
+  font-size: 1.35rem;
+}
+
+.market-trend-section {
+  background-color: #f8fafd;
+}
+
+.market-title {
+  color: #0b1426;
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  letter-spacing: -0.02em;
+}
+
+.market-subtitle {
+  max-width: 620px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Icons Ko Small Aur Fixed Rakhna */
+.market-table img,
+.coin-icon-img {
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  max-width: 28px !important;
+  object-fit: contain !important;
+  border-radius: 50% !important;
+}
+
+/* Har Row Ko Card Ki Tarah Banana */
+.market-table {
+  border-collapse: separate !important;
+  border-spacing: 0 12px !important;
+  width: 100% !important;
+}
+
+.coin-row-card {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(11, 20, 38, 0.04) !important;
+}
+
+.coin-row-card td {
+  padding-top: 1.1rem !important;
+  padding-bottom: 1.1rem !important;
+  background-color: #ffffff !important;
+  border: none !important;
+  vertical-align: middle !important;
+}
+
+.coin-row-card td:first-child {
+  border-top-left-radius: 14px !important;
+  border-bottom-left-radius: 14px !important;
+}
+
+.coin-row-card td:last-child {
+  border-top-right-radius: 14px !important;
+  border-bottom-right-radius: 14px !important;
+}
+
+/* Buy Pill Badge */
+.buy-badge {
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  background-color: #0062ff !important;
+  color: #ffffff !important;
+  padding: 0.25rem 0.65rem !important;
+  border-radius: 50rem !important;
+  margin-left: 0.5rem !important;
+}
+
+/* Mini Top Badges */
+.mini-badge-coin {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.badge-btc {
+  color: #f7931a;
+}
+.badge-eth {
+  color: #627eea;
+}
+.badge-bnb {
+  color: #f3ba2f;
+}
+.badge-atom {
+  color: #2e3148;
+}
+.badge-xrp {
+  color: #23292f;
+}
+.badge-sol {
+  color: #14f195;
+}
+
+/* Sparklines Size */
+.sparkline-wrapper {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+/* ==========================================================================
+   SECTION: TRUSTED PLATFORM (FEATURES)
+   ========================================================================== */
+.trusted-platform-section {
+  background: #ffffff;
+}
+
+.trusted-title {
+  color: #0b1426;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.trusted-gradient-text {
+  background: linear-gradient(90deg, #00c6ff 0%, #007bff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.trusted-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Feature Cards */
+.feature-item-card {
+  background: #ffffff;
+  border: 1px solid #eef2f6;
+  transition: all 0.3s ease;
+}
+
+.feature-title {
+  color: #0b1426;
+  font-size: 1.2rem;
+}
+
+.feature-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.feature-link {
+  color: #00a3ff;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s ease;
+}
+
+.feature-link:hover {
+  gap: 10px;
+  color: #0077ff;
+}
+
+/* Middle Glow Active Card */
+.active-card {
+  background: #ffffff;
+  border-radius: 1.25rem !important;
+  box-shadow: 0 20px 45px rgba(0, 163, 255, 0.12) !important;
+  border: 1px solid #f0f6ff;
+}
+
+.active-title {
+  color: #00a3ff;
+}
+
+/* ==========================================================================
+   SECTION: KEY FEATURES & GLOBAL STATS
+   ========================================================================== */
+.key-features-section {
+  background-color: #f8fafd;
+}
+
+.features-main-heading {
+  color: #0b1426;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+
+.text-cyan-accent {
+  color: #00c6ff;
+}
+
+.heading-sparkle {
+  color: #0084ff;
+  font-size: 1.6rem;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.features-subtext {
+  font-size: 0.98rem;
+}
+
+/* Stat Cards */
+.stat-card {
+  border-radius: 1.25rem;
+  min-height: 170px;
+  transition: transform 0.2s ease;
+}
+
+.plain-stat-card {
+  background: transparent;
+}
+
+.stat-number {
+  color: #0b1426;
+  font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+/* Active Highlighted Blue Card */
+.active-blue-stat-card {
+  background: linear-gradient(180deg, #00a3ff 0%, #0062ff 100%);
+  box-shadow: 0 15px 35px rgba(0, 98, 255, 0.28);
+}
+
+.active-blue-stat-card .stat-number {
+  color: #ffffff !important;
+}
+
+.active-blue-stat-card .stat-label {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* World Map Container & Geo Pins */
+.world-map-wrapper {
+  max-width: 580px;
+  min-height: 300px;
+}
+
+.world-map-svg {
+  height: auto;
+  opacity: 0.85;
+}
+
+/* Glowing Map Pins */
+.map-pin {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #00a3ff;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 3px rgba(0, 163, 255, 0.25),
+    0 0 10px rgba(0, 163, 255, 0.8);
+  transform: translate(-50%, -50%);
+  animation: mapPinPulse 2.5s infinite;
+}
+
+@keyframes mapPinPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 163, 255, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(0, 163, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 163, 255, 0);
+  }
+}
+
+/* ==========================================================================
+   SECTION: TESTIMONIAL
+   ========================================================================== */
+.testimonial-section {
+  background-color: #ffffff;
+}
+
+/* Avatar Frame & Blue Border Glow */
+.testimonial-avatar-wrapper {
+  border-radius: 1.5rem;
+  border: 4px solid #00a3ff;
+  padding: 4px;
+}
+
+.testimonial-img {
+  width: 100%;
+  max-width: 320px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 1.25rem !important;
+  display: block;
+}
+
+/* Floating Brand Badge */
+.netflix-badge {
+  bottom: 24px;
+  right: -36px;
+  box-shadow: 0 12px 30px rgba(11, 20, 38, 0.08) !important;
+  border: 1px solid #eef2f6;
+  min-width: 140px;
+}
+
+.netflix-text {
+  color: #e50914;
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+/* Quote & Content */
+.testimonial-quote {
+  color: #0b1426;
+  font-size: clamp(1.3rem, 2.3vw, 1.75rem);
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+
+.author-name {
+  color: #00a3ff;
+  font-size: 1.05rem;
+}
+
+.author-role {
+  font-size: 0.9rem;
+}
+
+/* Decorative Sparkle */
+.testimonial-sparkle {
+  color: #00a3ff;
+  font-size: 1.6rem;
+  top: 48%;
+  right: 0;
+  pointer-events: none;
+}
+
+/* Slider Arrow Controls */
+.btn-arrow-nav {
+  background: transparent;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-arrow-nav:hover {
+  transform: scale(1.15);
+}
+
+@media (max-width: 767.98px) {
+  .netflix-badge {
+    right: 10px;
+    bottom: 10px;
+  }
+  .testimonial-sparkle {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   SECTION: HOW IT WORKS
+   ========================================================================== */
+.how-it-works-section {
+  background-color: #f8fafd;
+}
+
+.how-it-works-title {
+  color: #0b1426;
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  letter-spacing: -0.02em;
+}
+
+.how-it-works-subtitle {
+  font-size: 0.98rem;
+}
+
+.sub-heading {
+  color: #0b1426;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+/* Step Process Cards - Hover & Active State Unified */
+.process-card {
+  background: #ffffff;
+  border: 2px solid #eef3f9;
+  border-radius: 1.25rem !important;
+  box-shadow: 0 8px 24px rgba(11, 20, 38, 0.03);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.process-card:hover,
+.process-card.active-process-card {
+  border-color: #00a3ff !important;
+  box-shadow: 0 16px 36px rgba(0, 163, 255, 0.12) !important;
+  transform: translateY(-4px);
+}
+
+/* Icon & Step Line */
+.process-icon-box {
+  width: 52px;
+  height: 52px;
+  background: radial-gradient(circle, #e8f4fd 0%, #d8ecfd 100%);
+  flex-shrink: 0;
+}
+
+.dashed-step-line {
+  border-top: 1.5px dashed #cbd5e1;
+  height: 1px;
+}
+
+.step-number-badge {
+  width: 30px;
+  height: 30px;
+  background-color: #0084ff;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-title {
+  color: #0b1426;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.step-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* Step CTA Button */
+.btn-step-action {
+  background: linear-gradient(90deg, #00c6ff 0%, #0077ff 100%);
+  color: #ffffff !important;
+  font-size: 0.8rem;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 119, 255, 0.25);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn-step-action:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+/* ==========================================================================
+   SECTION: LEARN CRYPTO
+   ========================================================================== */
+.learn-crypto-section {
+  background-color: #ffffff;
+}
+
+.learn-title {
+  color: #0b1426;
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  letter-spacing: -0.02em;
+}
+
+/* Category Sidebar Links */
+.category-nav-btn {
+  background: transparent;
+  font-size: 1.05rem;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.category-nav-btn:hover {
+  color: #0084ff !important;
+}
+
+.active-category {
+  color: #00a3ff !important;
+}
+
+/* Article Cards & Media */
+.article-card {
+  transition: transform 0.2s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-3px);
+}
+
+.article-img-box {
+  background-color: #0b1426;
+}
+
+.article-img {
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.article-thumb-img {
+  height: 210px;
+}
+
+.article-overlay-bar {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  font-size: 0.85rem;
+}
+
+.fs-8 {
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.article-title {
+  color: #0b1426;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.article-excerpt {
+  color: #8c9cae !important;
+}
+
+/* ==========================================================================
+   SECTION: CTA BANNER (STATIC)
+   ========================================================================== */
+.cta-banner-card {
+  background: radial-gradient(
+    circle at 95% 50%,
+    rgba(204, 235, 255, 0.75) 0%,
+    #f5f9fd 75%
+  );
+  border: 1px solid #e2eefb;
+  box-shadow: 0 16px 45px rgba(11, 20, 38, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-cyan-text {
+  color: #00b2fe;
+}
+
+.cta-blue-text {
+  color: #0062ff;
+}
+
+.cta-heading {
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.btn-outline-cta {
+  border: 1.5px solid #00a3ff !important;
+  color: #0077ff !important;
+  background-color: transparent !important;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-cta:hover {
+  background-color: #0084ff !important;
+  color: #ffffff !important;
+}
+
+.cta-image-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.cta-coin-img {
+  max-height: 330px;
+  width: auto;
+  filter: drop-shadow(0 25px 35px rgba(0, 98, 255, 0.22));
+  transform: rotate(-10deg);
+}
+
+.cta-deco {
+  position: absolute;
+  pointer-events: none;
+}
+
+.cta-sparkle-1 {
+  top: 18%;
+  left: 6%;
+  color: #00a3ff;
+  font-size: 1.3rem;
+}
+
+.cta-sparkle-2 {
+  bottom: 22%;
+  left: 48%;
+  color: #00a3ff;
+  font-size: 1rem;
+}
+
+.cta-sparkle-3 {
+  top: 16%;
+  left: 64%;
+  color: #c084fc;
+  font-size: 1.3rem;
+}
+
+.cta-dot-1 {
+  width: 16px;
+  height: 16px;
+  background-color: #0084ff;
+  border-radius: 50%;
+  bottom: 25%;
+  left: 36%;
+}
+
+.cta-dot-2 {
+  width: 8px;
+  height: 8px;
+  background-color: #0084ff;
+  border-radius: 50%;
+  top: 32%;
+  right: 15%;
+}
+
+/* ==========================================================================
+   SECTION: FOOTER
+   ========================================================================== */
+.footer-section {
+  background-color: #032050;
+  color: #ffffff;
+}
+
+.footer-desc {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  max-width: 380px;
+}
+
+.footer-col-title {
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition:
+    color 0.2s ease,
+    padding-left 0.2s ease;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: #00d2ff;
+  padding-left: 3px;
+}
+
+.footer-divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  width: 100%;
+}
+
+.footer-copy,
+.footer-legal {
+  letter-spacing: 0.2px;
+}
+
+.footer-legal-link {
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-legal-link:hover {
+  color: #ffffff;
+}
