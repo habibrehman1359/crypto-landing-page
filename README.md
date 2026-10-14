@@ -1,16 +1,35 @@
-# React + Vite
+# ⚡ MetaBits - Institutional Crypto Trading Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance, fully responsive Web3 landing page built with **React**, **Bootstrap 5**, and **Custom Modern CSS**. Designed to meet tier-1 fintech UI/UX standards with real-time price updates, category filtering, and interactive workflow guides.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Key Features
 
-## React Compiler
+- **Live Market Feed:** Real-time simulated price ticks and 24h/7d percentage changes with dynamic SVG sparklines.
+- **Interactive Workflow:** 3-step dynamic onboarding guide with state-driven border animations and hover effects.
+- **Curated Educational Hub:** Category-based filtering ("All", "Bitcoin", "Blockchain", "Tutorial") for knowledge articles.
+- **Client Testimonials:** Custom responsive testimonial slider with brand affiliation badges.
+- **Modern SaaS Aesthetics:** Ambient radial lighting, glassmorphic card borders, and responsive grid layouts.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend Library:** React (Functional Components & Hooks)
+- **Styling:** Custom Modular CSS3 & Bootstrap 5
+- **Icons & Graphics:** Inline SVG Icons & Curated 3D Web3 Assets
+- **Build Tool:** Vite
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- npm or yarn
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/habibrehman1359/crypto-landing-page.git](https://github.com/habibrehman1359/crypto-landing-page.git)
